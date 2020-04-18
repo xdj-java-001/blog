@@ -1,113 +1,130 @@
 <!DOCTYPE html>
-
-
-<html lang="en">
-
-
+<html>
 <head>
-  <meta charset="utf-8" />
-   
-  <meta name="keywords" content="技术" />
-   
-  <meta name="description" content="Java世界第一" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-    使用hexo搭建github个人博客 |  XDJ个人博客
-  </title>
-  <meta name="generator" content="hexo-theme-ayer">
-  
-  <link rel="shortcut icon" href="/favicon.ico" />
-  
-  
-<link rel="stylesheet" href="/blog/dist/main.css">
-
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
-
-  
-<link rel="stylesheet" href="/blog/css/custom.css">
-
-  
-  
-<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-
-  
+  <meta charset="utf-8">
   
 
   
+  <title>使用hexo搭建github个人博客 | XDJ个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="###我们这里参考hexo官方文档 https:&#x2F;&#x2F;hexo.io&#x2F;docs ，进行安装配置 使用hexo首先要安装node.js和git 不同环境安装git和node.js的方法 git下载 node.js下载 安装node.js双击node.js setup 弹出安装页面，然后一直点击下一步就可以了 node.js默认安装路径为C:\Program Files\nodejs。如下图则说明安装成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用hexo搭建github个人博客">
+<meta property="og:url" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/index.html">
+<meta property="og:site_name" content="XDJ个人博客">
+<meta property="og:description" content="###我们这里参考hexo官方文档 https:&#x2F;&#x2F;hexo.io&#x2F;docs ，进行安装配置 使用hexo首先要安装node.js和git 不同环境安装git和node.js的方法 git下载 node.js下载 安装node.js双击node.js setup 弹出安装页面，然后一直点击下一步就可以了 node.js默认安装路径为C:\Program Files\nodejs。如下图则说明安装成">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/hexo-web.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/hexo-plugins.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/install-git.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/install-node.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/download-git.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/download-node.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/node-setup.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/install-node-setup.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/node-install-ok.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/node-ev.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/git-install-ok.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/git-ev.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/git-v.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/hexo-install.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/hexo-folder.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/hexo-index.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/blog-folder.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/img-insert.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/img-cnf.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/hexo-themes.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/theme-to-github.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/theme-github.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/new-theme.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/theme-cnf.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/theme-change-ok.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/blog-git.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/blog-url-cnf.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/blog-git-cnf.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/hexoIo-git-cnf.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/crate-githubIo.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/crate-blog-copy-link.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/hexo-g.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/github-login.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/github-blog.png">
+<meta property="article:published_time" content="2020-04-17T16:41:31.000Z">
+<meta property="article:modified_time" content="2020-04-18T17:09:14.412Z">
+<meta property="article:author" content="冼东剑">
+<meta property="article:tag" content="技术">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/hexo-web.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="XDJ个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
 
-</head>
-
-</html>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
-  <div id="app">
-    <main class="content on">
-      <section class="outer">
-  <article id="post-personal-blog" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  使用hexo搭建github个人博客
-</h1>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/blog/2020/04/18/personal-blog/" class="article-date">
-  <time datetime="2020-04-17T16:41:31.000Z" itemprop="datePublished">2020-04-18</time>
-</a>
-      
-      
-      
-<div class="word_count">
-    <span class="post-time">
-        <span class="post-meta-item-icon">
-            <i class="ri-quill-pen-line"></i>
-            <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.3k</span>
-        </span>
-    </span>
-
-    <span class="post-time">
-        &nbsp; | &nbsp;
-        <span class="post-meta-item-icon">
-            <i class="ri-book-open-line"></i>
-            <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">5 min</span>
-        </span>
-    </span>
-</div>
-
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">XDJ个人博客</a>
+      </h1>
       
     </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://xdj-java-001.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-personal-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/04/18/personal-blog/" class="article-date">
+  <time datetime="2020-04-17T16:41:31.000Z" itemprop="datePublished">2020-04-18</time>
+</a>
     
-
+  </div>
+  <div class="article-inner">
     
     
-    <div class="tocbot"></div>
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用hexo搭建github个人博客
+    </h1>
+  
 
-
-
-
-
-    
-
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-      
-
-      
-      <p>###我们这里参考hexo官方文档 <a href="https://hexo.io/docs" target="_blank" rel="noopener">https://hexo.io/docs</a> ，进行安装配置<br><img src="hexo-web.png" alt="hexo官网"><br></br></p>
+        <p>###我们这里参考hexo官方文档 <a href="https://hexo.io/docs" target="_blank" rel="noopener">https://hexo.io/docs</a> ，进行安装配置<br><img src="hexo-web.png" alt="hexo官网"><br></br></p>
 <h3 id="使用hexo首先要安装node-js和git"><a href="#使用hexo首先要安装node-js和git" class="headerlink" title="使用hexo首先要安装node.js和git"></a>使用hexo首先要安装node.js和git</h3><p><img src="hexo-plugins.png" alt="使用hexo必装软件"><br></br></p>
 <h4 id="不同环境安装git和node-js的方法"><a href="#不同环境安装git和node-js的方法" class="headerlink" title="不同环境安装git和node.js的方法"></a>不同环境安装git和node.js的方法</h4><p><img src="install-git.png" alt=""><br></br><br><img src="install-node.png" alt=""></p>
 <h4 id="git下载"><a href="#git下载" class="headerlink" title="git下载"></a>git下载</h4><p><img src="download-git.png" alt=""></p>
@@ -145,549 +162,115 @@
 
 <h4 id="修改-config-yml文件的配置："><a href="#修改-config-yml文件的配置：" class="headerlink" title="修改_config.yml文件的配置："></a>修改_config.yml文件的配置：</h4><p>打开配置文件，先修改url和root的值，如不修改则访问博客（非本地访问）时无法加载样式<br><img src="blog-url-cnf.png" alt=""><br>再拉到最后，如下图：<br><img src="blog-git-cnf.png" alt=""><br>那么这里要怎么配置呢？这个配置hexo官方文档有说明：<br><img src="hexoIo-git-cnf.png" alt=""><br>在你的github上创建好 用户名.github.io仓库,之后再创建一个博客的blog仓库（仓库名自定义）将链接复制进_config.yml配置文件即可，如下图：<br><img src="crate-githubIo.png" alt=""><br><img src="crate-blog-copy-link.png" alt=""><br>接下来就可以通过 hexo g命令生成所有的静态页</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo&gt;hexo g</span><br></pre></td></tr></table></figure>
-<p><img src="hexo-g.png" alt=""><br>然后在通过hexo d 命令将博客部署到github上了<br>注：第一次执行hexo d 命令需要输入github 账号密码登陆验证<br><img src="github-login.png" alt=""><br>我们进入github.io仓库就能看到，之前用hexo g生成的所有静态页面都已经部署上去了<br><img src="github-source.png" alt=""></p>
+<p><img src="hexo-g.png" alt=""><br>然后在通过hexo d 命令将博客部署到github上了<br>注：第一次执行hexo d 命令需要输入github 账号密码登陆验证<br><img src="github-login.png" alt=""><br>我们进入github.io仓库就能看到，之前用hexo g生成的所有静态页面都已经部署上去了<br><img src="github-blog.png" alt=""></p>
 
       
-      <!-- reward -->
-      
-      <div id="reward-btn">
-        Donate
-      </div>
-      
     </div>
-    
-    
-      <!-- copyright -->
-      
-        <div class="declare">
-          <ul class="post-copyright">
-            <li>
-              <i class="ri-copyright-line"></i>
-              <strong>Copyright： </strong>
-              Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
-            </li>
-          </ul>
-        </div>
-        
     <footer class="article-footer">
-      
-          
-<div class="share-btn">
-      <span class="share-sns share-outer">
-        <i class="ri-share-forward-line"></i>
-        分享
-      </span>
-      <div class="share-wrap">
-        <i class="arrow"></i>
-        <div class="share-icons">
-          
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="ri-weibo-fill"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="ri-wechat-fill"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="ri-qq-fill"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="ri-douban-line"></i>
-          </a>
-          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a> -->
-          
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="ri-facebook-circle-fill"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="ri-twitter-fill"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="ri-google-fill"></i>
-          </a>
-        </div>
-      </div>
-</div>
-
-<div class="wx-share-modal">
-    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div id="share-mask"></div>
+      <a data-url="http://xdj-java-001.github.io/blog/2020/04/18/personal-blog/" data-id="ck95vnbm90001zsvih05o5vw8" class="article-share-link">Share</a>
       
       
-
     </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2020/04/18/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2020/04/18/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/04/18/personal-blog/">使用hexo搭建github个人博客</a>
+          </li>
+        
+      </ul>
+    </div>
   </div>
 
   
+</aside>
+        
+      </div>
+      <footer id="footer">
   
-  <nav class="article-nav">
-    
-      <a href="/blog/2020/04/18/hello-world/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            Hello World
-          
-        </div>
-      </a>
-    
-    
-  </nav>
-
-
-  
-
-  
-  
-<!-- valine评论 -->
-<div id="vcomments-box">
-    <div id="vcomments">
-    </div>
-</div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
-<script>
-    new Valine({
-        el: '#vcomments',
-        app_id: '',
-        app_key: '',
-        path: window.location.pathname,
-        notify: 'false',
-        verify: 'false',
-        avatar: 'monsterid',
-        placeholder: '给我的文章加点评论吧~',
-        recordIP: true
-    });
-    const infoEle = document.querySelector('#vcomments .info');
-    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
-        infoEle.childNodes.forEach(function (item) {
-            item.parentNode.removeChild(item);
-        });
-    }
-</script>
-<style>
-    #vcomments-box {
-        padding: 5px 30px;
-    }
-
-    @media screen and (max-width: 800px) {
-        #vcomments-box {
-            padding: 5px 0px;
-        }
-    }
-
-    #vcomments-box #vcomments {
-        background-color: #fff;
-    }
-
-    .v .vlist .vcard .vh {
-        padding-right: 20px;
-    }
-
-    .v .vlist .vcard {
-        padding-left: 10px;
-    }
-</style>
-
-  
-
-  
-  
-  
-  
-  
-
-</article>
-</section>
-      <footer class="footer">
   <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2015-2020
-        <i class="ri-heart-fill heart_icon"></i> 冼东剑
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        
-        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-        <span class="division">|</span>
-        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        <span>
-  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></s>
-  <span class="division">|</span>
-  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
-</span>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
-        
-      </li>
-    </ul>
+    <div id="footer-info" class="inner">
+      &copy; 2020 冼东剑<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
   </div>
 </footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-      </div>
-    </main>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
+    </div>
+    <nav id="mobile-nav">
   
-  <div class="logo">
-    <a href="/blog/"><img src="/images/ayer-side.svg" alt="XDJ个人博客"></a>
-  </div>
+    <a href="/blog/" class="mobile-nav-link">Home</a>
   
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/blog/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/blog/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/blog/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/blog/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/blog/tags/%E6%97%85%E8%A1%8C/">旅行</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="http://shenyu-vip.lofter.com" target="_blank" rel="noopener">摄影</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/blog/2019/about">关于我</a>
-    </li>
-    
-  </ul>
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
 </nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="Search">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-      <a class="nav-item-link" target="_blank" href="/blog/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        document.querySelector('.content').classList.remove('on');
-        document.querySelector('.sidebar').classList.remove('on');
-      }
-    </script>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
     
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/blog/js/jquery-2.0.3.min.js"></script>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<script src="/blog/js/lazyload.min.js"></script>
-
-
-<script>
-  try {
-    var typed = new Typed("#subtitle", {
-      strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
-      startDelay: 0,
-      typeSpeed: 200,
-      loop: true,
-      backSpeed: 100,
-      showCursor: true
-    });
-  } catch (err) {
-  }
-
-</script>
-
-
-
-
-<script src="/blog/js/tocbot.min.js"></script>
-
-<script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    scrollContainer: 'main',
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto'
-  });
-</script>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/blog/dist/main.js"></script>
-
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script>
-
-
-
-
-
-<script src="/blog/js/busuanzi-2.3.pure.min.js"></script>
-
-
-
-<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
-
-
-<!-- 复制 -->
 
   
-<link rel="stylesheet" href="/blog/css/clipboard.css">
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
 
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
 
-    
+<script src="/blog/js/script.js"></script>
+
+
+
+
   </div>
 </body>
-
 </html>
