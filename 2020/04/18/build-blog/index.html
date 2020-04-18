@@ -5,14 +5,14 @@
   
 
   
-  <title>使用hexo搭建github个人博客 | XDJ个人博客</title>
+  <title>使用hexo+github搭建个人博客 | XDJ个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###我们这里参考hexo官方文档 https:&#x2F;&#x2F;hexo.io&#x2F;docs ，进行安装配置 使用hexo首先要安装node.js和git 不同环境安装git和node.js的方法 git下载 node.js下载 安装node.js双击node.js setup 弹出安装页面，然后一直点击下一步就可以了 node.js默认安装路径为C:\Program Files\nodejs。如下图则说明安装成">
+  <meta name="description" content="我们这里参考hexo官方文档 https:&#x2F;&#x2F;hexo.io&#x2F;docs ，进行安装配置 使用hexo首先要安装node.js和git 不同环境安装git和node.js的方法 git下载 node.js下载 安装node.js双击node.js setup 弹出安装页面，然后一直点击下一步就可以了  node.js默认安装路径为C:\Program Files\nodejs。如下图则说明安装成功：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用hexo搭建github个人博客">
+<meta property="og:title" content="使用hexo+github搭建个人博客">
 <meta property="og:url" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/index.html">
 <meta property="og:site_name" content="XDJ个人博客">
-<meta property="og:description" content="###我们这里参考hexo官方文档 https:&#x2F;&#x2F;hexo.io&#x2F;docs ，进行安装配置 使用hexo首先要安装node.js和git 不同环境安装git和node.js的方法 git下载 node.js下载 安装node.js双击node.js setup 弹出安装页面，然后一直点击下一步就可以了 node.js默认安装路径为C:\Program Files\nodejs。如下图则说明安装成">
+<meta property="og:description" content="我们这里参考hexo官方文档 https:&#x2F;&#x2F;hexo.io&#x2F;docs ，进行安装配置 使用hexo首先要安装node.js和git 不同环境安装git和node.js的方法 git下载 node.js下载 安装node.js双击node.js setup 弹出安装页面，然后一直点击下一步就可以了  node.js默认安装路径为C:\Program Files\nodejs。如下图则说明安装成功：">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/hexo-web.png">
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/hexo-plugins.png">
@@ -22,7 +22,6 @@
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/download-node.png">
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/node-setup.png">
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/install-node-setup.png">
-<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/node-install-ok.png">
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/node-ev.png">
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/git-install-ok.png">
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/git-ev.png">
@@ -50,7 +49,7 @@
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/github-blog.png">
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/blog-build-ok.png">
 <meta property="article:published_time" content="2020-04-17T16:41:31.000Z">
-<meta property="article:modified_time" content="2020-04-18T17:55:23.753Z">
+<meta property="article:modified_time" content="2020-04-18T23:06:28.273Z">
 <meta property="article:author" content="冼东剑">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -117,7 +116,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      使用hexo搭建github个人博客
+      使用hexo+github搭建个人博客
     </h1>
   
 
@@ -125,53 +124,82 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###我们这里参考hexo官方文档 <a href="https://hexo.io/docs" target="_blank" rel="noopener">https://hexo.io/docs</a> ，进行安装配置<br><img src="hexo-web.png" alt="hexo官网"><br></br></p>
+        <h3 id="我们这里参考hexo官方文档-https-hexo-io-docs-，进行安装配置"><a href="#我们这里参考hexo官方文档-https-hexo-io-docs-，进行安装配置" class="headerlink" title="我们这里参考hexo官方文档 https://hexo.io/docs ，进行安装配置"></a>我们这里参考hexo官方文档 <a href="https://hexo.io/docs" target="_blank" rel="noopener">https://hexo.io/docs</a> ，进行安装配置</h3><p><img src="hexo-web.png" alt="hexo官网"><br></br></p>
 <h3 id="使用hexo首先要安装node-js和git"><a href="#使用hexo首先要安装node-js和git" class="headerlink" title="使用hexo首先要安装node.js和git"></a>使用hexo首先要安装node.js和git</h3><p><img src="hexo-plugins.png" alt="使用hexo必装软件"><br></br></p>
 <h4 id="不同环境安装git和node-js的方法"><a href="#不同环境安装git和node-js的方法" class="headerlink" title="不同环境安装git和node.js的方法"></a>不同环境安装git和node.js的方法</h4><p><img src="install-git.png" alt=""><br></br><br><img src="install-node.png" alt=""></p>
 <h4 id="git下载"><a href="#git下载" class="headerlink" title="git下载"></a>git下载</h4><p><img src="download-git.png" alt=""></p>
 <h4 id="node-js下载"><a href="#node-js下载" class="headerlink" title="node.js下载"></a>node.js下载</h4><p><img src="download-node.png" alt=""></p>
 <h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><p>双击node.js setup 弹出安装页面，然后一直点击下一步就可以了<br><img src="node-setup.png" alt=""><br><img src="install-node-setup.png" alt=""></p>
-<p>node.js默认安装路径为C:\Program Files\nodejs。如下图则说明安装成功：<br><img src="node-install-ok.png" alt=""></p>
-<p>node环境变量配置:<br><img src="node-ev.png" alt=""><br>node环境配置好后，进入cmd 输入node -v查看版本成功至此node安装配置完成</p>
+</br>
+node.js默认安装路径为C:\Program Files\nodejs。如下图则说明安装成功：
+![](node-install-ok.png)
+
+<h4 id="node环境变量配置"><a href="#node环境变量配置" class="headerlink" title="node环境变量配置:"></a>node环境变量配置:</h4><p><img src="node-ev.png" alt=""></p>
+<p>node环境配置好后，进入cmd 输入node -v查看版本成功至此node安装配置完成</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\xdj&gt;node -v</span><br><span class="line">v12.16.2</span><br></pre></td></tr></table></figure>
 
-<h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><p>git安装也是一路next即可，详细步骤可参考：<a href="https://blog.csdn.net/sanxd/article/details/82624127" target="_blank" rel="noopener">https://blog.csdn.net/sanxd/article/details/82624127</a><br></br><br>如下图，git安装成功<br><img src="git-install-ok.png" alt=""><br>接下来配置git环境变量<br><img src="git-ev.png" alt=""><br>git环境变量配置好后，cmd命令产看git版本:git –version,版本产看成功，支持git安装配置完成。</p>
+<h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><p>git安装也是一路next即可，详细步骤可参考：<a href="https://blog.csdn.net/sanxd/article/details/82624127" target="_blank" rel="noopener">https://blog.csdn.net/sanxd/article/details/82624127</a></p>
+<p>如下图，git安装成功<br><img src="git-install-ok.png" alt=""></p>
+<h4 id="git环境变量配置"><a href="#git环境变量配置" class="headerlink" title="git环境变量配置"></a>git环境变量配置</h4><p><img src="git-ev.png" alt=""></p>
+<p>git环境变量配置好后，cmd命令产看git版本:git –version,版本产看成功，支持git安装配置完成。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\xdj&gt;git --version</span><br><span class="line">git version 2.26.1.windows.1</span><br></pre></td></tr></table></figure>
-<p><img src="git-v.png" alt=""><br></br><br>接下来我们需要新建一个新的文件夹（我这里在c盘下新建了一个Blog的文件夹）<br></br><br>cmd进入blog，修改npm源为国内淘宝的源以提高速度</p>
+<p><img src="git-v.png" alt=""></p>
+</br>
+接下来我们需要新建一个新的文件夹（我这里在c盘下新建了一个Blog的文件夹）
+</br>
+cmd进入blog，修改npm源为国内淘宝的源以提高速度
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog&gt;npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">C:\Users\xdj\AppData\Roaming\npm\cnpm -&gt; C:\Users\xdj\AppData\Roaming\npm\node_modules\cnpm\bin\cnpm</span><br><span class="line">+ cnpm@6.1.1</span><br><span class="line">updated 1 package <span class="keyword">in</span> 43.556s</span><br></pre></td></tr></table></figure>
+
 <p>检测是否安装成功</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog&gt;cnpm -v</span><br><span class="line">cnpm@6.1.1 (C:\Users\xdj\AppData\Roaming\npm\node_modules\cnpm\lib\parse_argv.js)</span><br><span class="line">npm@6.14.4 (C:\Users\xdj\AppData\Roaming\npm\node_modules\cnpm\node_modules\npm\lib\npm.js)</span><br><span class="line">node@12.16.2 (C:\Program Files\nodejs\node.exe)</span><br><span class="line">npminstall@3.27.0 (C:\Users\xdj\AppData\Roaming\npm\node_modules\cnpm\node_modules\npminstall\lib\index.js)</span><br><span class="line">prefix=C:\Users\xdj\AppData\Roaming\npm</span><br><span class="line">win32 x64 10.0.17134</span><br><span class="line">registry=https://r.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
 <p>registry=<a href="https://r.npm.taobao.org" target="_blank" rel="noopener">https://r.npm.taobao.org</a> 说明淘宝源安装成功<br>如果出现npm不是内部命令的情况，可以输入一下命令解决</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog&gt;npm install -g cnpm</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>我们回到hexo官方文档，根据文档介绍我们需要使用npm install -g hexo-cli命令安装hexo组件，使系统支持hexo</p>
 <p><img src="hexo-install.png" alt=""></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog&gt;npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>接下来执行如图操作：<br><img src="hexo-folder.png" alt=""></p>
+
+<p>接下来执行如下操作：<br><img src="hexo-folder.png" alt=""></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog&gt; hexo init hexo</span><br><span class="line">C:\Blog&gt; <span class="built_in">cd</span> hexo </span><br><span class="line">C:\Blog\hexo&gt; npm install</span><br></pre></td></tr></table></figure>
 <p>hexo init hexo命令会从hexo的服务器上将hexo的源码下载下来放在我们定义的hexo文件夹下<br>npm install安装hexo</p>
 <p>安装完成后，输入hexo s启动服务器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo&gt;hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+
 <p>启动好之后，会提示可以通过<a href="http://localhost:4000地址访问博客，如下图：">http://localhost:4000地址访问博客，如下图：</a><br><img src="hexo-index.png" alt=""></p>
-<h3 id="博客编辑"><a href="#博客编辑" class="headerlink" title="博客编辑"></a>博客编辑</h3><p>博客写在哪个地方？博客文档存放在hexo/source/_posts 目录下：<br><img src="blog-folder.png" alt=""><br>每一个.md文件就是一篇博客文章<br>这里想要在文档中插入图片，必须先在将_config.yml配置文件的 _asset_folder属性设为true，通过<br> <img src="img-insert.png" alt=""><br> 这样的格式命令就可以在文档中插入图片了。更多markdown语法学习可参考： <a href="https://www.jianshu.com/p/8da1f362f898" target="_blank" rel="noopener">https://www.jianshu.com/p/8da1f362f898</a></p>
+<h3 id="博客编辑"><a href="#博客编辑" class="headerlink" title="博客编辑"></a>博客编辑</h3><p>博客写在哪个地方？博客文档存放在hexo/source/_posts 目录下：<br><img src="blog-folder.png" alt=""></p>
+<p>每一个.md文件就是一篇博客文章<br>这里想要在文档中插入图片，必须先在将_config.yml配置文件的 _asset_folder属性设为true，通过<br> <img src="img-insert.png" alt=""></p>
+<p> 这样的格式命令就可以在文档中插入图片了。更多markdown语法学习可参考： <a href="https://www.jianshu.com/p/8da1f362f898" target="_blank" rel="noopener">https://www.jianshu.com/p/8da1f362f898</a></p>
 <p><img src="img-cnf.png" alt=""></p>
-<h3 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h3><p>如果想要不同的博客主题可以在 hexo官网 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a> 上选择喜欢的主题下载<br><img src="hexo-themes.png" alt=""><br>点击主题名称进入主题的github仓库<br><img src="theme-to-github.png" alt=""><br>复制主题仓库链接<br><img src="theme-github.png" alt=""><br>cmd命令进入themes文件夹，将主题的仓库代码克隆下来</p>
+<h3 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h3><p>如果想要不同的博客主题可以在 hexo官网 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a> 上选择喜欢的主题下载<br><img src="hexo-themes.png" alt=""></p>
+<p>点击主题名称进入主题的github仓库<br><img src="theme-to-github.png" alt=""></p>
+<p>复制主题仓库链接<br><img src="theme-github.png" alt=""></p>
+<p>cmd命令进入themes文件夹，将主题的仓库代码克隆下来</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo&gt;<span class="built_in">cd</span> themes</span><br><span class="line"></span><br><span class="line">C:\Blog\hexo\themes&gt;git <span class="built_in">clone</span> https://github.com/Shen-Yu/hexo-theme-ayer.git</span><br><span class="line">Cloning into <span class="string">'hexo-theme-ayer'</span>...</span><br><span class="line">remote: Enumerating objects: 169, <span class="keyword">done</span>.</span><br><span class="line">remote: Counting objects: 100% (169/169), <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (121/121), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 1161 (delta 74), reused 120 (delta 46), pack-reused 992</span><br><span class="line">Receiving objects: 100% (1161/1161), 4.88 MiB | 219.00 KiB/s, <span class="keyword">done</span>.</span><br><span class="line">Resolving deltas: 100% (708/708), <span class="keyword">done</span>.</span><br></pre></td></tr></table></figure>
-<p><img src="new-theme.png" alt=""><br>主题下载完成，然后将_config.ym配置文件中主题的配置改为新下载的主题<br><img src="theme-cnf.png" alt=""><br>cmd命令hexo s重启服务 访问<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>我们可以看到博客主题已经更换成功了<br><img src="theme-change-ok.png" alt=""></p>
+<p><img src="new-theme.png" alt=""></p>
+<p>主题下载完成，然后将_config.ym配置文件中主题的配置改为新下载的主题<br><img src="theme-cnf.png" alt=""></p>
+<p>cmd命令hexo s重启服务 访问<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>我们可以看到博客主题已经更换成功了<br><img src="theme-change-ok.png" alt=""></p>
 <h3 id="博客编写完之后如何部署到github？"><a href="#博客编写完之后如何部署到github？" class="headerlink" title="博客编写完之后如何部署到github？"></a>博客编写完之后如何部署到github？</h3><p>hexo官方文档上有个可以实现一键部署的操作，通过 npm install hexo-deployer-git –save 命令安装git在hexo上的插件，<br>安装完成后就可以通过 hexo d 命令将博客部署到GitHub上。<br><img src="blog-git.png" alt=""></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo&gt;npm install hexo-deployer-git --save</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="keyword">for</span> fsevents@2.1.2: wanted &#123;<span class="string">"os"</span>:<span class="string">"darwin"</span>,<span class="string">"arch"</span>:<span class="string">"any"</span>&#125; (current: &#123;<span class="string">"os"</span>:<span class="string">"win32"</span>,<span class="string">"arch"</span>:<span class="string">"x64"</span>&#125;)</span><br><span class="line"></span><br><span class="line">+ hexo-deployer-git@2.1.0</span><br><span class="line">added 1 package from 1 contributor <span class="keyword">in</span> 1.312s</span><br><span class="line"></span><br><span class="line">5 packages are looking <span class="keyword">for</span> funding</span><br><span class="line">  run `npm fund` <span class="keyword">for</span> details</span><br></pre></td></tr></table></figure>
 
-<h4 id="修改-config-yml文件的配置："><a href="#修改-config-yml文件的配置：" class="headerlink" title="修改_config.yml文件的配置："></a>修改_config.yml文件的配置：</h4><p>打开配置文件，先修改url和root的值，如不修改则访问博客（非本地访问）时无法加载样式<br><img src="blog-url-cnf.png" alt=""><br>再拉到最后，如下图：<br><img src="blog-git-cnf.png" alt=""><br>那么这里要怎么配置呢？这个配置hexo官方文档有说明：<br><img src="hexoIo-git-cnf.png" alt=""><br>在你的github上创建好 用户名.github.io仓库,之后再创建一个博客的blog仓库（仓库名自定义）将链接复制进_config.yml配置文件即可，如下图：<br><img src="crate-githubIo.png" alt=""><br><img src="crate-blog-copy-link.png" alt=""><br>接下来就可以通过 hexo g命令生成所有的静态页</p>
+<h4 id="修改-config-yml文件的配置："><a href="#修改-config-yml文件的配置：" class="headerlink" title="修改_config.yml文件的配置："></a>修改_config.yml文件的配置：</h4><p>打开配置文件，先修改url和root的值，如不修改则访问博客（非本地访问）时无法加载样式<br><img src="blog-url-cnf.png" alt=""></p>
+<p>再拉到最后，如下图：<br><img src="blog-git-cnf.png" alt=""><br>那么这里要怎么配置呢？这个配置hexo官方文档有说明：<br><img src="hexoIo-git-cnf.png" alt=""></p>
+<p>在你的github上创建好 用户名.github.io仓库,之后再创建一个博客的blog仓库（仓库名自定义）将链接复制进_config.yml配置文件即可，如下图：<br><img src="crate-githubIo.png" alt=""></p>
+<p><img src="crate-blog-copy-link.png" alt=""></p>
+<p>接下来就可以通过 hexo g命令生成所有的静态页</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo&gt;hexo g</span><br></pre></td></tr></table></figure>
-<p><img src="hexo-g.png" alt=""><br>然后在通过hexo d 命令将博客部署到github上了<br>注：若未设置github账号密码，第一次执行hexo d 命令时需要输入github 账号密码登陆验证<br>也可通过下面git命令设置你的github账号密码：账号密码：</p>
+<p><img src="hexo-g.png" alt=""></p>
+<p>然后在通过hexo d 命令将博客部署到github上了<br>注：若未设置github账号密码，第一次执行hexo d 命令时需要输入github 账号密码登陆验证<br>也可通过下面git命令设置你的github账号密码：账号密码：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo\themes&gt;git config --global user.name  <span class="string">"yourAccount"</span></span><br><span class="line"></span><br><span class="line">C:\Blog\hexo\themes&gt;git config --global user.email  <span class="string">"yourPassword"</span></span><br><span class="line"></span><br><span class="line">C:\Blog\hexo\themes&gt;git config user.name</span><br><span class="line">yourAccount</span><br><span class="line"></span><br><span class="line">C:\Blog\hexo\themes&gt;git config user.email</span><br><span class="line">yourPassword</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
-<p><img src="github-login.png" alt=""><br>我们进入github.io仓库就能看到，之前用hexo g生成的所有静态页面都已经部署上去了<br><img src="github-blog.png" alt=""></p>
-<p>最后我们通过链接 <a href="https://xdj-java-001.github.io/blog/">https://xdj-java-001.github.io/blog/</a> 访问博客<br><img src="blog-build-ok.png" alt=""><br>博客访问成功，至此博客搭建完成！</p>
+<p><img src="github-login.png" alt=""></p>
+<p>我们进入github.io仓库就能看到，之前用hexo g生成的所有静态页面都已经部署上去了<br><img src="github-blog.png" alt=""></p>
+<p>最后我们通过链接 <a href="https://xdj-java-001.github.io/blog/">https://xdj-java-001.github.io/blog/</a> 访问博客<br><img src="blog-build-ok.png" alt=""></p>
+<p>博客访问成功，至此博客搭建完成！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/" data-id="ck95xj4pq0000z0vi92hafr05" class="article-share-link">Share</a>
+      <a data-url="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/" data-id="ck968iylh0000vcvigd6y09hn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -228,7 +256,7 @@
           </li>
         
           <li>
-            <a href="/blog/2020/04/18/build-blog/">使用hexo搭建github个人博客</a>
+            <a href="/blog/2020/04/18/build-blog/">使用hexo+github搭建个人博客</a>
           </li>
         
       </ul>
