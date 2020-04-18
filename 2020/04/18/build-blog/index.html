@@ -48,8 +48,9 @@
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/hexo-g.png">
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/github-login.png">
 <meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/github-blog.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/blog-build-ok.png">
 <meta property="article:published_time" content="2020-04-17T16:41:31.000Z">
-<meta property="article:modified_time" content="2020-04-18T17:09:14.412Z">
+<meta property="article:modified_time" content="2020-04-18T17:55:23.753Z">
 <meta property="article:author" content="冼东剑">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -162,12 +163,15 @@
 
 <h4 id="修改-config-yml文件的配置："><a href="#修改-config-yml文件的配置：" class="headerlink" title="修改_config.yml文件的配置："></a>修改_config.yml文件的配置：</h4><p>打开配置文件，先修改url和root的值，如不修改则访问博客（非本地访问）时无法加载样式<br><img src="blog-url-cnf.png" alt=""><br>再拉到最后，如下图：<br><img src="blog-git-cnf.png" alt=""><br>那么这里要怎么配置呢？这个配置hexo官方文档有说明：<br><img src="hexoIo-git-cnf.png" alt=""><br>在你的github上创建好 用户名.github.io仓库,之后再创建一个博客的blog仓库（仓库名自定义）将链接复制进_config.yml配置文件即可，如下图：<br><img src="crate-githubIo.png" alt=""><br><img src="crate-blog-copy-link.png" alt=""><br>接下来就可以通过 hexo g命令生成所有的静态页</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo&gt;hexo g</span><br></pre></td></tr></table></figure>
-<p><img src="hexo-g.png" alt=""><br>然后在通过hexo d 命令将博客部署到github上了<br>注：第一次执行hexo d 命令需要输入github 账号密码登陆验证<br><img src="github-login.png" alt=""><br>我们进入github.io仓库就能看到，之前用hexo g生成的所有静态页面都已经部署上去了<br><img src="github-blog.png" alt=""></p>
+<p><img src="hexo-g.png" alt=""><br>然后在通过hexo d 命令将博客部署到github上了<br>注：若未设置github账号密码，第一次执行hexo d 命令时需要输入github 账号密码登陆验证<br>也可通过下面git命令设置你的github账号密码：账号密码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo\themes&gt;git config --global user.name  <span class="string">"yourAccount"</span></span><br><span class="line"></span><br><span class="line">C:\Blog\hexo\themes&gt;git config --global user.email  <span class="string">"yourPassword"</span></span><br><span class="line"></span><br><span class="line">C:\Blog\hexo\themes&gt;git config user.name</span><br><span class="line">yourAccount</span><br><span class="line"></span><br><span class="line">C:\Blog\hexo\themes&gt;git config user.email</span><br><span class="line">yourPassword</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<p><img src="github-login.png" alt=""><br>我们进入github.io仓库就能看到，之前用hexo g生成的所有静态页面都已经部署上去了<br><img src="github-blog.png" alt=""></p>
+<p>最后我们通过链接 <a href="https://xdj-java-001.github.io/blog/">https://xdj-java-001.github.io/blog/</a> 访问博客<br><img src="blog-build-ok.png" alt=""><br>博客访问成功，至此博客搭建完成！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/" data-id="ck95wrf75000180vicem62ag0" class="article-share-link">Share</a>
+      <a data-url="http://xdj-java-001.github.io/blog/2020/04/18/build-blog/" data-id="ck95xj4pq0000z0vi92hafr05" class="article-share-link">Share</a>
       
       
     </footer>
@@ -185,11 +189,6 @@
       </div>
     </a>
   
-  
-    <a href="/blog/2020/04/18/personal-blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">使用hexo搭建github个人博客</div>
-    </a>
   
 </nav>
 
@@ -230,10 +229,6 @@
         
           <li>
             <a href="/blog/2020/04/18/build-blog/">使用hexo搭建github个人博客</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2020/04/18/personal-blog/">使用hexo搭建github个人博客</a>
           </li>
         
       </ul>
