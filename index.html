@@ -20,13 +20,13 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   
   
-<link rel="stylesheet" href="/dist/main.css">
+<link rel="stylesheet" href="/blog/dist/main.css">
 
   
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
 
   
-<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/blog/css/custom.css">
 
   
   
@@ -49,7 +49,7 @@
     
       
       <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
-        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+        target="_blank"><img width="149" height="149" src="/blog/images/forkme.png"
           class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
     
   <div class="cover-frame">
@@ -57,7 +57,7 @@
       <img src="/images/cover1.jpg" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
-      <h1><a href="/">XDJ个人博客</a></h1>
+      <h1><a href="/blog/">XDJ个人博客</a></h1>
       <div id="subtitle-box">
         
         <span id="subtitle"></span>
@@ -92,7 +92,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/04/18/hello-world/"
+  <a class="article-title" href="/blog/2020/04/18/hello-world/"
     >Hello World</a> 
 </h2>
  
@@ -102,7 +102,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/04/18/hello-world/" class="article-date">
+      <a href="/blog/2020/04/18/hello-world/" class="article-date">
   <time datetime="2020-04-18T05:24:05.054Z" itemprop="datePublished">2020-04-18</time>
 </a>
       
@@ -170,7 +170,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/04/18/personal-blog/"
+  <a class="article-title" href="/blog/2020/04/18/personal-blog/"
     >使用hexo搭建github个人博客</a> 
 </h2>
  
@@ -180,7 +180,7 @@
 
     
     <div class="article-meta">
-      <a href="/2020/04/18/personal-blog/" class="article-date">
+      <a href="/blog/2020/04/18/personal-blog/" class="article-date">
   <time datetime="2020-04-17T16:41:31.000Z" itemprop="datePublished">2020-04-18</time>
 </a>
       
@@ -233,7 +233,8 @@
 <p><img src="new-theme.png" alt=""><br>主题下载完成，然后将_config.ym配置文件中主题的配置改为新下载的主题<br><img src="theme-cnf.png" alt=""><br>cmd命令hexo s重启服务 访问<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br>我们可以看到博客主题已经更换成功了<br><img src="theme-change-ok.png" alt=""></p>
 <h3 id="博客编写完之后如何部署到github？"><a href="#博客编写完之后如何部署到github？" class="headerlink" title="博客编写完之后如何部署到github？"></a>博客编写完之后如何部署到github？</h3><p>hexo官方文档上有个可以实现一键部署的操作，通过 npm install hexo-deployer-git –save 命令安装git在hexo上的插件，<br>安装完成后就可以通过 hexo d 命令将博客部署到GitHub上。<br><img src="blog-git.png" alt=""></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo&gt;npm install hexo-deployer-git --save</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="keyword">for</span> fsevents@2.1.2: wanted &#123;<span class="string">"os"</span>:<span class="string">"darwin"</span>,<span class="string">"arch"</span>:<span class="string">"any"</span>&#125; (current: &#123;<span class="string">"os"</span>:<span class="string">"win32"</span>,<span class="string">"arch"</span>:<span class="string">"x64"</span>&#125;)</span><br><span class="line"></span><br><span class="line">+ hexo-deployer-git@2.1.0</span><br><span class="line">added 1 package from 1 contributor <span class="keyword">in</span> 1.312s</span><br><span class="line"></span><br><span class="line">5 packages are looking <span class="keyword">for</span> funding</span><br><span class="line">  run `npm fund` <span class="keyword">for</span> details</span><br></pre></td></tr></table></figure>
-<p>插件安装完成之后还需要修改一下_config.yml文件的配置，<br>打开配置文件，拉到最后，如下图：<br><img src="blog-git-cnf.png" alt=""><br>那么这里要怎么配置呢？这个配置hexo官方文档有说明：<br><img src="hexoIo-git-cnf.png" alt=""><br>在你的github上创建好 用户名.github.io仓库之后将链接复制进_config.yml配置文件即可，如下图：<br><img src="githubIo-link.png" alt=""><br>接下来就可以通过 hexo g命令生成所有的静态页</p>
+
+<h4 id="修改-config-yml文件的配置："><a href="#修改-config-yml文件的配置：" class="headerlink" title="修改_config.yml文件的配置："></a>修改_config.yml文件的配置：</h4><p>打开配置文件，先修改url和root的值，如不修改则访问博客（非本地访问）时无法加载样式<br><img src="blog-url-cnf.png" alt=""><br>再拉到最后，如下图：<br><img src="blog-git-cnf.png" alt=""><br>那么这里要怎么配置呢？这个配置hexo官方文档有说明：<br><img src="hexoIo-git-cnf.png" alt=""><br>在你的github上创建好 用户名.github.io仓库,之后再创建一个博客的blog仓库（仓库名自定义）将链接复制进_config.yml配置文件即可，如下图：<br><img src="crate-githubIo.png" alt=""><br><img src="crate-blog-copy-link.png" alt=""><br>接下来就可以通过 hexo g命令生成所有的静态页</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo&gt;hexo g</span><br></pre></td></tr></table></figure>
 <p><img src="hexo-g.png" alt=""><br>然后在通过hexo d 命令将博客部署到github上了<br>注：第一次执行hexo d 命令需要输入github 账号密码登陆验证<br><img src="github-login.png" alt=""><br>我们进入github.io仓库就能看到，之前用hexo g生成的所有静态页面都已经部署上去了<br><img src="github-source.png" alt=""></p>
 
@@ -333,29 +334,29 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="XDJ个人博客"></a>
+    <a href="/blog/"><img src="/images/ayer-side.svg" alt="XDJ个人博客"></a>
   </div>
   
   <ul class="nav nav-main">
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
+      <a class="nav-item-link" href="/blog/">主页</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
+      <a class="nav-item-link" href="/blog/archives">归档</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
+      <a class="nav-item-link" href="/blog/categories">分类</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
+      <a class="nav-item-link" href="/blog/tags">标签</a>
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+      <a class="nav-item-link" href="/blog/tags/%E6%97%85%E8%A1%8C/">旅行</a>
     </li>
     
     <li class="nav-item">
@@ -363,7 +364,7 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/2019/about">关于我</a>
+      <a class="nav-item-link" href="/blog/2019/about">关于我</a>
     </li>
     
   </ul>
@@ -377,7 +378,7 @@
       </a>
       
       
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+      <a class="nav-item-link" target="_blank" href="/blog/atom.xml" title="RSS Feed">
         <i class="ri-rss-line"></i>
       </a>
       
@@ -419,10 +420,10 @@
   </div>
 </div>
     
-<script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/blog/js/jquery-2.0.3.min.js"></script>
 
 
-<script src="/js/lazyload.min.js"></script>
+<script src="/blog/js/lazyload.min.js"></script>
 
 
 <script>
@@ -448,7 +449,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
 
-<script src="/dist/main.js"></script>
+<script src="/blog/dist/main.js"></script>
 
 
 
@@ -563,7 +564,7 @@
 
 
 
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
+<script src="/blog/js/busuanzi-2.3.pure.min.js"></script>
 
 
 
@@ -573,7 +574,7 @@
 <!-- 复制 -->
 
   
-<link rel="stylesheet" href="/css/clipboard.css">
+<link rel="stylesheet" href="/blog/css/clipboard.css">
 
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
