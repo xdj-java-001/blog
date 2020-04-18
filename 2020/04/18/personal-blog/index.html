@@ -38,8 +38,11 @@
 <meta property="og:image" content="http://yoursite.com/2020/04/18/personal-blog/blog-git-cnf.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/18/personal-blog/hexoIo-git-cnf.png">
 <meta property="og:image" content="http://yoursite.com/2020/04/18/personal-blog/githubIo-link.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/personal-blog/hexo-g.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/personal-blog/github-login.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/18/personal-blog/github-source.png">
 <meta property="article:published_time" content="2020-04-17T16:41:31.000Z">
-<meta property="article:modified_time" content="2020-04-18T10:37:04.781Z">
+<meta property="article:modified_time" content="2020-04-18T11:01:54.053Z">
 <meta property="article:author" content="冼东剑">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -147,12 +150,14 @@
 <h3 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h3><p>如果想要不同的博客主题可以在 hexo官网 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a> 上选择喜欢的主题下载<br><img src="hexo-themes.png" alt=""></p>
 <h3 id="博客编写完之后如何部署到github？"><a href="#博客编写完之后如何部署到github？" class="headerlink" title="博客编写完之后如何部署到github？"></a>博客编写完之后如何部署到github？</h3><p>hexo官方文档上有个可以实现一键部署的操作，通过 npm install hexo-deployer-git –save 命令安装git在hexo上的插件，<br>安装完成后就可以通过 hexo d 命令将博客部署到GitHub上。<br><img src="blog-git.png" alt=""></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo&gt;npm install hexo-deployer-git --save</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="keyword">for</span> fsevents@2.1.2: wanted &#123;<span class="string">"os"</span>:<span class="string">"darwin"</span>,<span class="string">"arch"</span>:<span class="string">"any"</span>&#125; (current: &#123;<span class="string">"os"</span>:<span class="string">"win32"</span>,<span class="string">"arch"</span>:<span class="string">"x64"</span>&#125;)</span><br><span class="line"></span><br><span class="line">+ hexo-deployer-git@2.1.0</span><br><span class="line">added 1 package from 1 contributor <span class="keyword">in</span> 1.312s</span><br><span class="line"></span><br><span class="line">5 packages are looking <span class="keyword">for</span> funding</span><br><span class="line">  run `npm fund` <span class="keyword">for</span> details</span><br></pre></td></tr></table></figure>
-<p>插件安装完成之后还需要修改一下_config.yml文件的配置，<br>打开配置文件，拉到最后，如下图：<br><img src="blog-git-cnf.png" alt=""><br>那么这里要怎么配置呢？这个配置hexo官方文档有说明：<br><img src="hexoIo-git-cnf.png" alt=""><br>在你的github上创建好 用户名.github.io仓库之后将链接复制进_config.yml配置文件即可，如下图：<br><img src="githubIo-link.png" alt=""><br>接下来就可以通过 hexo d 命令将博客部署到github上了</p>
+<p>插件安装完成之后还需要修改一下_config.yml文件的配置，<br>打开配置文件，拉到最后，如下图：<br><img src="blog-git-cnf.png" alt=""><br>那么这里要怎么配置呢？这个配置hexo官方文档有说明：<br><img src="hexoIo-git-cnf.png" alt=""><br>在你的github上创建好 用户名.github.io仓库之后将链接复制进_config.yml配置文件即可，如下图：<br><img src="githubIo-link.png" alt=""><br>接下来就可以通过 hexo g命令生成所有的静态页</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Blog\hexo&gt;hexo g</span><br></pre></td></tr></table></figure>
+<p><img src="hexo-g.png" alt=""><br>然后在通过hexo d 命令将博客部署到github上了<br>注：第一次执行hexo d 命令需要输入github 账号密码登陆验证<br><img src="github-login.png" alt=""><br>我们进入github.io仓库就能看到，之前用hexo g生成的所有静态页面都已经部署上去了<br><img src="github-source.png" alt=""></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/18/personal-blog/" data-id="ck95hpiee0000d4vi6zd1gprx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/18/personal-blog/" data-id="ck95j28xp0001isvi5uhs78g2" class="article-share-link">Share</a>
       
       
     </footer>
