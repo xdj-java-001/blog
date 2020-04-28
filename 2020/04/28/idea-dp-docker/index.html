@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Idea部署Springboot项目至Docker | 剑指java</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="JAVA" />
+  
+  <meta name="description" content="打包项目代码项目开发完成测试通过后，在idea的terminal中输入maven命令mvn clean package将项目打包。将target目录下的项目jar包扔到linux服务器的&#x2F;usr&#x2F;local&#x2F;docker&#x2F;bootproject&#x2F;路径下。 编写Dockerfile文件编写Dockerfile文件，放在项目jar包的同目录下。Dockerfile：文件内容如下：FROM java:8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Idea部署Springboot项目至Docker">
+<meta property="og:url" content="http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/index.html">
+<meta property="og:site_name" content="剑指java">
+<meta property="og:description" content="打包项目代码项目开发完成测试通过后，在idea的terminal中输入maven命令mvn clean package将项目打包。将target目录下的项目jar包扔到linux服务器的&#x2F;usr&#x2F;local&#x2F;docker&#x2F;bootproject&#x2F;路径下。 编写Dockerfile文件编写Dockerfile文件，放在项目jar包的同目录下。Dockerfile：文件内容如下：FROM java:8">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/idea-conf-docker-1.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/idea-conf-docker-2.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/idaa-docker-opr.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/idea-docker-image.png">
+<meta property="og:image" content="http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/idea-docker-container.png">
+<meta property="article:published_time" content="2020-04-28T09:10:10.181Z">
+<meta property="article:modified_time" content="2020-04-28T11:33:58.754Z">
+<meta property="article:author" content="XDJ">
+<meta property="article:tag" content="技术 jAVA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/idea-conf-docker-1.png">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+  
+<script src="/blog/js/pace.min.js"></script>
+
+  
+
+  
+  
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/blog/" class="left">
+                    <span class="site-title"><i>剑指JAVA</i></span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/blog/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/blog/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/blog/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/blog/">
+                    <img src="/blog/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                      剑指JAVA
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注JAVA开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//minhow.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//https://github.com/xdj-java-001">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-idea-dp-docker" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Idea部署Springboot项目至Docker
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2020-04-28
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="打包项目代码"><a href="#打包项目代码" class="headerlink" title="打包项目代码"></a>打包项目代码</h3><p>项目开发完成测试通过后，在idea的terminal中输入maven命令<code>mvn clean package</code>将项目打包。<br>将target目录下的项目jar包扔到linux服务器的<code>/usr/local/docker/bootproject/</code>路径下。</p>
+<h3 id="编写Dockerfile文件"><a href="#编写Dockerfile文件" class="headerlink" title="编写Dockerfile文件"></a>编写Dockerfile文件</h3><p>编写Dockerfile文件，放在项目jar包的同目录下。Dockerfile：文件内容如下：<br>FROM java:8  —定制的镜像都是基于 FROM 的镜像，这里的 java 就是定制需要的基础镜像。后续的操作都是基于java8。<br>VOLUME /tmp   —定义数据卷目录。在启动容器时忘记挂载数据卷，会自动挂载到匿名卷。<br>ADD  boot.jar /boot.jar  —复制指令，从上下文目录中复制文件或者目录到容器里指定路径。<br>EXPOSE 7999   —声明端口<br>ENTRYPOINT [“java”,”-jar”,”/boot.jar”] –用于运行程序，在执行 docker run 的时候可以指定 ENTRYPOINT 运行所需的参数</p>
+<h3 id="构建镜像"><a href="#构建镜像" class="headerlink" title="构建镜像"></a>构建镜像</h3><p>在Dockerfile文件所在的目录下运行<code>docker build -t project-image .</code>命令构建镜像。<br>其中<code>project-image</code>是镜像名称，<code>.</code>这个点代表的是当前路径。</p>
+<h3 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h3><p>将镜像运行生成容器：docker run -id  –name project-container -p 80:7999 project-image<br>访问服务器端口，项目部署完成！<br><code>但是上面的部署方式太繁琐，在实际的开发当中我们可以通过以下方式实现idea打包项目一键部署至tdocker</code></p>
+<h3 id="Idea集成docker实现打包一键部署"><a href="#Idea集成docker实现打包一键部署" class="headerlink" title="Idea集成docker实现打包一键部署"></a>Idea集成docker实现打包一键部署</h3><h4 id="Docker开启远程访问"><a href="#Docker开启远程访问" class="headerlink" title="Docker开启远程访问"></a>Docker开启远程访问</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进入到&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;docker.service</span><br><span class="line">vim &#x2F;lib&#x2F;systemd&#x2F;system&#x2F;docker.service</span><br><span class="line">找到ExecStart行，修改成下边这样：ExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;dockerd -H tcp:&#x2F;&#x2F;0.0.0.0:2375 -H unix:&#x2F;&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock</span><br><span class="line">重启守护进程：systemctl daemon-reload</span><br><span class="line">重启docker：systemctl restart docker</span><br></pre></td></tr></table></figure>
+<h4 id="Idea安装docker插件"><a href="#Idea安装docker插件" class="headerlink" title="Idea安装docker插件"></a>Idea安装docker插件</h4><p>比较新版本的idea默认安装了docker，如果没有可以自行安装：<br>打开Idea，从File-&gt;Settings-&gt;Plugins-&gt;Install JetBrains plugin进入插件安装界面，在搜索框中输入docker，可以看到Docker integration，点击右边的Install按钮进行安装。安装后重启Idea。</p>
+<h4 id="Iead配置docker"><a href="#Iead配置docker" class="headerlink" title="Iead配置docker"></a>Iead配置docker</h4><p>配置docker连接到远程的docker服务<br><img src="idea-conf-docker-1.png" alt=""><br>修改docker使用阿里的镜像加速器<br><img src="idea-conf-docker-2.png" alt=""><br>这是我阿里云上镜像仓库加速器：registry.hub.docker.com<a href="https://6aj9u5mp.mirror.aliyuncs.com" target="_blank" rel="noopener">https://6aj9u5mp.mirror.aliyuncs.com</a></p>
+<h4 id="docker集成mawen插件"><a href="#docker集成mawen插件" class="headerlink" title="docker集成mawen插件"></a>docker集成mawen插件</h4><p>docker集成mawen插件：docker-mawen-plugin。<br>在项目pom文件<build>标签中将该插件集成进去：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">       &lt;plugins&gt;</span><br><span class="line">           &lt;plugin&gt;</span><br><span class="line">               &lt;groupId&gt;com.spotify&lt;&#x2F;groupId&gt;</span><br><span class="line">               &lt;artifactId&gt;docker-maven-plugin&lt;&#x2F;artifactId&gt;</span><br><span class="line">               &lt;version&gt;1.0.0&lt;&#x2F;version&gt;</span><br><span class="line">               &lt;!-- configuration标签里面的内容用来生成dockerfile  --&gt;</span><br><span class="line">               &lt;configuration&gt;</span><br><span class="line">                   &lt;!--  镜像名称  --&gt;</span><br><span class="line">                   &lt;imageName&gt;$&#123;docker.image.prefix&#125;&#x2F;$&#123;project.artifactId&#125;&lt;&#x2F;imageName&gt;</span><br><span class="line">                   &lt;!-- 只顶你标签 --&gt;</span><br><span class="line">                   &lt;imageTags&gt;</span><br><span class="line">                       &lt;imageTag&gt;latest&lt;&#x2F;imageTag&gt;</span><br><span class="line">                   &lt;&#x2F;imageTags&gt;</span><br><span class="line">                   &lt;!-- 基础镜像 jdk1.8 --&gt;</span><br><span class="line">                   &lt;baseImage&gt;java&lt;&#x2F;baseImage&gt;</span><br><span class="line">                   &lt;!--  制作者提供的个人信息  --&gt;</span><br><span class="line">                   &lt;maintainer&gt;docker_maven docker_maven@email.com&lt;&#x2F;maintainer&gt;</span><br><span class="line">                   &lt;!--  切换到&#x2F;root工作目录 --&gt;</span><br><span class="line">                   &lt;workdir&gt;&#x2F;ROOT&lt;&#x2F;workdir&gt;</span><br><span class="line">                   &lt;cmd&gt;[&quot;java&quot;, &quot;-version&quot;]&lt;&#x2F;cmd&gt;</span><br><span class="line">                   &lt;entryPoint&gt;[&quot;java&quot;,&quot;-jar&quot;,&quot;$&#123;project.build.finalName&#125;.jar&quot;]&lt;&#x2F;entryPoint&gt;</span><br><span class="line">                   &lt;!-- 指定远程docker的 api地址 --&gt;</span><br><span class="line">                   &lt;dockerHost&gt;http:&#x2F;&#x2F;192.168.50.142:2375&lt;&#x2F;dockerHost&gt;</span><br><span class="line"></span><br><span class="line">                   &lt;!-- 这里是复制 jar 包到 docker 容器指定目录配置 --&gt;</span><br><span class="line">                   &lt;resources&gt;</span><br><span class="line">                       &lt;resource&gt;</span><br><span class="line">                           &lt;targetPath&gt;&#x2F;ROOT&lt;&#x2F;targetPath&gt;</span><br><span class="line">                           &lt;!-- 用于指定需要复制的根目录， $&#123;project.build.directory&#125;表示target目录--&gt;</span><br><span class="line">                           &lt;directory&gt;$&#123;project.build.directory&#125;&lt;&#x2F;directory&gt;</span><br><span class="line">                           &lt;!-- 用于指定需要复制的文件， $&#123;project.build.finalName&#125;.jar指的是打包后的jar包文件--&gt;</span><br><span class="line">                           &lt;include&gt;$&#123;project.build.finalName&#125;.jar&lt;&#x2F;include&gt;</span><br><span class="line">                       &lt;&#x2F;resource&gt;</span><br><span class="line">                   &lt;&#x2F;resources&gt;</span><br><span class="line">               &lt;&#x2F;configuration&gt;</span><br><span class="line">           &lt;&#x2F;plugin&gt;</span><br><span class="line">       &lt;&#x2F;plugins&gt;</span><br><span class="line">   &lt;&#x2F;build&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="idaa-docker-opr.png" alt=""><br>至此idea集成docker的配置完成了</p>
+<h4 id="一键打包项目生成镜像"><a href="#一键打包项目生成镜像" class="headerlink" title="一键打包项目生成镜像"></a>一键打包项目生成镜像</h4><p>在terminal中执行打包命令：<code>mvn clean package docker:build</code>就可以一键生成项目的镜像到远程服务器的docker中了。<br><img src="idea-docker-image.png" alt=""></p>
+<h4 id="选择镜像生成容器："><a href="#选择镜像生成容器：" class="headerlink" title="选择镜像生成容器："></a>选择镜像生成容器：</h4><p><img src="idea-docker-container.png" alt=""></p>
+<p>至此使用idea一键打包部署项目至docker完成，后续docker镜像、容器的增删改均可在idea中完成。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2020年04月28日 19:33</p>
+        <p>原始链接： <a class="post-url" href="/blog/2020/04/28/idea-dp-docker/" title="Idea部署Springboot项目至Docker">http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/</a></p>
+        <footer>
+            <a href="http://xdj-java-001.github.io/blog">
+                <img src="/blog/images/logo.png" alt="XDJ">
+                XDJ
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+	    请我喝杯JAVA☕
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/blog/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/blog/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/blog/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/blog/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/blog/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/&title=《Idea部署Springboot项目至Docker》 — 剑指java&pic=http://xdj-java-001.github.io/blogimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/&title=《Idea部署Springboot项目至Docker》 — 剑指java&source=Java世界第一" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Idea部署Springboot项目至Docker》 — 剑指java&url=http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/&via=http://xdj-java-001.github.io/blog" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://xdj-java-001.github.io/blog/2020/04/28/idea-dp-docker/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+	   <nav class="post-toc-wrap" style='max-height:460px;overflow:scroll;width: 220px;left: 14px;'>
+		   &nbsp;&nbsp;
+		   <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#打包项目代码"><span class="post-toc-text">打包项目代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编写Dockerfile文件"><span class="post-toc-text">编写Dockerfile文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#构建镜像"><span class="post-toc-text">构建镜像</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运行容器"><span class="post-toc-text">运行容器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Idea集成docker实现打包一键部署"><span class="post-toc-text">Idea集成docker实现打包一键部署</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Docker开启远程访问"><span class="post-toc-text">Docker开启远程访问</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Idea安装docker插件"><span class="post-toc-text">Idea安装docker插件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Iead配置docker"><span class="post-toc-text">Iead配置docker</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#docker集成mawen插件"><span class="post-toc-text">docker集成mawen插件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一键打包项目生成镜像"><span class="post-toc-text">一键打包项目生成镜像</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#选择镜像生成容器："><span class="post-toc-text">选择镜像生成容器：</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2020/04/20/nginx/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Nginx服务器搭建和配置</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2020 XDJ<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://xdj-java-001.github.io/blog",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            
+        </div>
+        <div id="sidebar-menu-box-tags">
+            
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/blog/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/blog/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/blog/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+
+<script src="/blog/js/search.js"></script>
+
+
+<script src="/blog/js/main.js"></script>
+
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  
+<script src="/blog/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  
+<script src="/blog/js/animate.js"></script>
+
+
+
+  
+<script src="/blog/js/pop-img.js"></script>
+
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
